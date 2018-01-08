@@ -9,10 +9,12 @@ spec:
   replicas: 1 # tells deployment to run 1 pods matching the template
   template: # create pods using pod definition in this template
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "metrics"
       labels:
         app: twelve-clouds
-        prometheus.io/scrape: "true"
-        prometheus.io.port: "8080"
     spec:
       containers:
       - name: twelve-clouds
