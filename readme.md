@@ -23,7 +23,7 @@ More info here: `https://prometheus.io/docs/prometheus/latest/querying/operators
 
 The node exporter gives you node relative information as well like CPU/disk usage etc.
 
-Run `count(node_cpu{mode="system", instance="192.168.99.100:9100"})` will return the cpu count which should match the number of CPU's in `kubectl describe nodes`
+Run `machine_cpu_cores` will return the CPU count which should match the number of CPU's in `kubectl describe nodes`
 
 ### Step 6: App metrics
 
